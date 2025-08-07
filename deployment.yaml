@@ -1,1 +1,22 @@
 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: 2048-game-deployment
+  labels:
+    app: 2048-game
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: 2048-game
+  template:
+    metadata:
+      labels:
+        app: 2048-game
+    spec:
+      containers:
+      - name: 2048-game
+        image: konda33/2048-game:latest
+        ports:
+        - containerPort: 80
