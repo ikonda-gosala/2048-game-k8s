@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: 2048-game
-        image: konda33/2048-game:${BUILD_NUMBER}
+        image: konda33/2048-game:latest
         ports:
         - containerPort: 80
